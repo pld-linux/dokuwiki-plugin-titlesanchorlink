@@ -6,11 +6,12 @@
 Summary:	DokuWiki TitlesAnchorLink Plugin
 Name:		dokuwiki-plugin-%{plugin}
 Version:	%{ver}
-Release:	1
+Release:	2
 License:	GPL v2
 Group:		Applications/WWW
 Source0:	https://github.com/Dric/dokuwiki-titlesanchorlink/archive/3ca9927/%{plugin}-%{subver}.tar.gz
 # Source0-md5:	2ac066f5186ca085fc3e9e3193211398
+Patch0:		heading-link.patch
 URL:		https://www.dokuwiki.org/plugin:titlesanchorlink
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.553
@@ -30,6 +31,7 @@ similar way to Github.
 %prep
 %setup -qc
 mv *-%{plugin}-*/* .
+%patch0 -p1
 
 %build
 version=$(awk '/^date/{print $2}' plugin.info.txt)
