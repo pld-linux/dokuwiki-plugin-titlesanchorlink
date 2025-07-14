@@ -30,7 +30,7 @@ similar way to Github.
 %prep
 %setup -qc
 mv *-%{plugin}-*/* .
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 version=$(awk '/^date/{print $2}' plugin.info.txt)
