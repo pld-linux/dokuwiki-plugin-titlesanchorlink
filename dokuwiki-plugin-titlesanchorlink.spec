@@ -5,7 +5,7 @@
 Summary:	DokuWiki TitlesAnchorLink Plugin
 Name:		dokuwiki-plugin-%{plugin}
 Version:	%{ver}
-Release:	2
+Release:	3
 License:	GPL v2
 Group:		Applications/WWW
 Source0:	https://github.com/Dric/dokuwiki-titlesanchorlink/archive/3ca9927/%{plugin}-%{subver}.tar.gz
