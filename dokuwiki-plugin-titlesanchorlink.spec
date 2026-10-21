@@ -1,16 +1,16 @@
-%define		subver	2013-03-01
+%define		subver	2022-01-06
 %define		ver		%(echo %{subver} | tr -d -)
 %define		plugin		titlesanchorlink
 %define		php_min_version 5.0.0
 Summary:	DokuWiki TitlesAnchorLink Plugin
 Name:		dokuwiki-plugin-%{plugin}
 Version:	%{ver}
-Release:	3
+Release:	1
 License:	GPL v2
 Group:		Applications/WWW
-Source0:	https://github.com/Dric/dokuwiki-titlesanchorlink/archive/3ca9927/%{plugin}-%{subver}.tar.gz
-# Source0-md5:	2ac066f5186ca085fc3e9e3193211398
-Patch0:		heading-link.patch
+Source0:	https://github.com/Dric/dokuwiki-titlesanchorlink/archive/ce78f76dc57a5e4cc029f3dacf06ee07218716ee/%{plugin}-%{subver}.tar.gz
+# Source0-md5:	81171ebc0e8baf484b60593af0dc53ae
+Patch0:		date.patch
 URL:		https://www.dokuwiki.org/plugin:titlesanchorlink
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.553
